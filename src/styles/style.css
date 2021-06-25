@@ -1,0 +1,385 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #393e46;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* menju ke konten */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/*
+   Like
+*/
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #db0000;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+    AppBar
+  */
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: #222831;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+  color: #eeeeee;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__brand a {
+  color: #00adb5;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 600;
+  display: block;
+  user-select: none;
+  min-height: 44px;
+  min-width: 44px;
+  text-align: center;
+  line-height: 44px;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: #222831;
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+  /* height: 100vh; */
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #eeeeee;
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* hero */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 35vh;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+}
+
+.hero .judul {
+  width: 100%;
+  height: 35vh;
+  color: white;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero .judul h4 {
+  font-weight: 300;
+  font-size: 30px;
+}
+
+/*
+    Main Content
+  */
+
+main {
+  /* padding: 0px 32px; */
+  flex: 1;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+  /* padding: 32px; */
+}
+
+.content h2 {
+  text-align: center;
+  color: #eeeeee;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.content .content__heading {
+  font-weight: normal;
+}
+
+/*
+    Restos
+  */
+
+.restos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin: 32px 0;
+  padding: 0px 32px;
+}
+
+/*
+    Resto Item
+  */
+
+.resto-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 400px;
+}
+
+.resto-item__header {
+  position: relative;
+}
+
+.resto-item .resto-item__header .resto-item__header__poster {
+  width: 100%;
+}
+
+.resto-item .resto-item__header .resto-item__header__rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: black;
+  color: white;
+}
+
+.resto-item
+  .resto-item__header
+  .resto-item__header__rating
+  .resto-item__header__rating__score {
+  margin-left: 10px;
+}
+
+.resto-item .resto-item__content {
+  padding: 16px;
+}
+
+.resto-item .resto-item__content h3 {
+  margin: 0 0 10px 0;
+}
+
+.resto-item .resto-item__content h3 a {
+  color: #00adb5;
+  text-decoration: none;
+  display: block;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.resto-item .resto-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  color: #eeeeee;
+}
+
+.resto-item .resto-item__content .resto-item-city {
+  color: #bf1722;
+  font-size: 0.8rem;
+}
+
+/*
+    resto detail
+  */
+/* .restos {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+} */
+
+.restos-detail {
+  padding: 0px 32px;
+}
+
+.restos-detail .resto__poster {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: auto;
+}
+
+.restos-detail .resto__title {
+  color: #00adb5;
+  text-align: center;
+}
+
+.restos-detail .resto__info h3,
+.restos-detail .resto__info p {
+  color: #eeeeee;
+}
+
+.restos-detail .resto__info h3 {
+  margin: 8px 0;
+  color: #00adb5;
+}
+
+.restos-detail .resto__info li {
+  list-style: none;
+  color: #eeeeee;
+}
+
+.restos-detail .review {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.restos-detail .review-card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #eeeeee;
+  margin: auto;
+  /* justify-content: space-around; */
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.restos-detail .review-card p {
+  color: #00adb5;
+}
+
+.restos-detail .review-card i {
+  text-align: center;
+  font-size: 2rem;
+  color: #eeeeee;
+}
+
+.restos-detail .review-card .review-name {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.restos-detail .review-card .review-comment {
+  font-size: 0.9rem;
+  color: #eeeeee;
+}
+
+.restos-detail .review-card .review-date {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.resto__info .resto__overview h3 {
+  color: #00adb5;
+}
+
+.resto__info .resto__overview p {
+  color: #eeeeee;
+}
+
+.empty-favorite-tag {
+  width: 80%;
+  height: 100px;
+  background-color: salmon;
+  color: #bf1722;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+    Footer
+  */
+
+footer {
+  padding: 16px;
+  background-color: #222831;
+}
+
+footer p {
+  text-align: center;
+  color: #aaaaaa;
+}
+
+footer p a {
+  color: #db0000;
+  text-decoration: none;
+}

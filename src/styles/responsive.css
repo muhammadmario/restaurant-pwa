@@ -1,0 +1,93 @@
+@media screen and (min-width: 650px) {
+  .app-bar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+  }
+
+  .app-bar .app-bar__brand h1 {
+    font-size: 1.5em;
+  }
+
+  .app-bar .app-bar__menu {
+    display: none;
+  }
+
+  .app-bar .app-bar__navigation {
+    position: static;
+    width: 100%;
+  }
+
+  .app-bar .app-bar__navigation ul li {
+    display: inline-block;
+  }
+
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+  }
+
+  /* .restos-detail .resto__poster {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+   
+  } */
+}
+
+@media screen and (min-width: 800px) {
+  .app-bar .app-bar__brand a {
+    font-size: 2em;
+  }
+
+  .restos-detail .review-card {
+    width: 300px;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .hero .judul {
+    height: 70vh;
+  }
+
+  .hero .judul h4 {
+    font-weight: 300;
+    font-size: 80px;
+  }
+
+  .content h2 {
+    font-size: 40px;
+  }
+
+  .restos-detail {
+    padding: 0px 100px;
+  }
+  /* .restos-detail .resto__poster {
+    width: 60%;
+  } */
+
+  .restos-detail .kategori {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .resto-item .resto-item__content p {
+    font-size: 0.8rem;
+  }
+}
+
+/* @media screen and (min-width: 1600px) {
+  .restos {
+    grid-template-columns: repeat(5, 1fr);
+  }
+} */
