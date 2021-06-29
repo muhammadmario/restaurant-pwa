@@ -16,5 +16,5 @@
     "import/first": "off",
     "array-callback-return": "off"
   },
-  "plugins": ["prettier"]
+  "plugins": ["prettier","jasmine"]
 }

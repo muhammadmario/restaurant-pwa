@@ -1,7 +1,8 @@
 import UrlParser from "../../routes/url-parser";
 import TheRestoDbSource from "../../data/theresto-source";
 import { createRestoDetailTemplate } from "../templates/template-creator";
-import LikeButtonInitiator from "../../utils/like-button-initiator";
+import LikeButtonPresenter from "../../utils/like-button-presenter";
+import FavoriteRestoIdb from "../../data/favoriteresto-idb";
 
 const Detail = {
   async render() {
@@ -15,13 +16,14 @@ const Detail = {
     // Fungsi ini akan dipanggil setelah render()
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const resto = await TheRestoDbSource.detailResto(url.id);
-    console.log(resto);
+    // console.log(resto);
 
     const restoContainer = document.querySelector("#restos-detail");
     restoContainer.innerHTML = createRestoDetailTemplate(resto);
 
-    LikeButtonInitiator.init({
+    LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector("#likeButtonContainer"),
+      favoriteRestos: FavoriteRestoIdb,
       resto: {
         id: resto.restaurant.id,
         name: resto.restaurant.name,
